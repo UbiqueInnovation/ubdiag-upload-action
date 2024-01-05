@@ -25,8 +25,8 @@ gitBranch=$(git rev-parse --abbrev-ref HEAD)
 buildType=$(tr a-z A-Z <<< "${buildType:0:1}")${buildType:1}
 
 apkFile="$(pwd)/$(find build -type f -name "*.apk" | head -n 1)"
-desymFile="$(pwd)/build/outputs/mapping/${flavor}${buildType}/mapping.txt"
-iconFile="$(pwd)/${webIconFile}"
+desymFile="$(pwd)/build/app/outputs/mapping/${flavor}${buildType}/mapping.txt"
+iconFile="$(pwd)/build/app/${webIconFile}"
 
 echo "Uploading apk to UBDiag"
 echo "Path to apk:            $apkFile"
