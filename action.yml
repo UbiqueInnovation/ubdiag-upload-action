@@ -31,7 +31,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://harbor.office.ubique.rocks/dockerhub-public-cache/ubinnovation/android-ubdiag-upload:v1.1.0'
+  image: 'docker://harbor.office.ubique.rocks/dockerhub-public-cache/ubinnovation/android-ubdiag-upload:feature/asvz'
   entrypoint: '/main.sh'
   args:
     - ${{ inputs.buildNumber }}
